@@ -1,0 +1,71 @@
+* {
+    box-sizing: border-box;
+    font-family: arial, san-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#calculator {
+    background-color: rgb(62, 62, 62);
+    border: black 1px solid;
+    border-radius: 5px;
+    display: grid;
+    grid-template-rows: 1.5fr repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+    height: 400px;
+    padding: 10px;
+    width: 250px;
+}
+
+.display {
+    align-items: center;
+    background-color: rgb(196, 196, 196);
+    border: black 1px solid;
+    border-radius: 3px;
+    display: flex;
+    font-size: 30px;
+    grid-column: span 4;
+    justify-content: right;
+    margin-bottom: 5px; /* is there a better way? */
+    padding: 0 5px;
+    text-align: right;
+}
+
+button {
+    align-items: center;
+    border-radius: 5px;
+    display: flex;
+    font-size: 20px;
+    justify-content: center;
+}
+
+.clear {
+    grid-column: 4;
+}
+
+.operand {
+    background-color: rgb(126, 148, 188);
+}
+
+.decimal {
+    background-color: rgb(145, 145, 145);
+}
+
+.operator, .equals {
+    background-color: rgb(77, 141, 168);
+}
+
+.clear {
+    background-color: rgb(68, 142, 138);
+}
+
+button:active:not(.decimal) {
+    opacity: 0.8;
+}
